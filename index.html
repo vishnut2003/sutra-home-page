@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sutra — A Modern Indian Way of Living</title>
+  <meta name="description" content="Sutra brings together a modern Indian way of dressing, living and gifting. Clothing, home, and craft, made with care." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Announcement marquee -->
+  <div class="announcement">
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Free shipping on orders above &#8377;1,000</span>
+        <span>&#9733;</span>
+        <span>The Gifting Concierge &mdash; delivers Pan-India</span>
+        <span>&#9733;</span>
+        <span>New In: The Narmada Edit</span>
+        <span>&#9733;</span>
+        <span>Express delivery in Delhi, Mumbai &amp; Bengaluru</span>
+        <span>&#9733;</span>
+        <span>Free shipping on orders above &#8377;1,000</span>
+        <span>&#9733;</span>
+        <span>The Gifting Concierge &mdash; delivers Pan-India</span>
+        <span>&#9733;</span>
+        <span>New In: The Narmada Edit</span>
+        <span>&#9733;</span>
+        <span>Express delivery in Delhi, Mumbai &amp; Bengaluru</span>
+        <span>&#9733;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="icon-btn menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Gifting</a></li>
+          <li><a href="#">Journal</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="brand" aria-label="Sutra home">
+        <span class="brand-mark">Sutra</span>
+        <span class="brand-tag">a modern Indian house</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <a href="#" class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+        </a>
+        <a href="#" class="icon-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+        </a>
+        <a href="#" class="icon-btn cart-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1.4 11.2A2 2 0 0 1 14.6 20H9.4a2 2 0 0 1-2-1.8L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero slider -->
+  <section class="hero">
+    <div class="hero-slides" id="heroSlides">
+      <article class="hero-slide is-active" style="background-image:url('assets/images/hero-1.jpg')">
+        <div class="hero-content">
+          <p class="eyebrow">New collection</p>
+          <h1>Narmada<br/><em>Threads of the River</em></h1>
+          <p class="lede">Handwoven kurtas, sarees and easy separates inspired by the rhythms of central India.</p>
+          <a href="#" class="btn btn-light">Shop Narmada</a>
+        </div>
+      </article>
+      <article class="hero-slide" style="background-image:url('assets/images/hero-2.jpg')">
+        <div class="hero-content">
+          <p class="eyebrow">The home edit</p>
+          <h1>Quiet rooms,<br/><em>warm corners</em></h1>
+          <p class="lede">Brass, terracotta and slow textiles for the home you actually live in.</p>
+          <a href="#" class="btn btn-light">Shop home</a>
+        </div>
+      </article>
+      <article class="hero-slide" style="background-image:url('assets/images/hero-3.jpg')">
+        <div class="hero-content">
+          <p class="eyebrow">Festive gifting</p>
+          <h1>For the people<br/><em>who matter</em></h1>
+          <p class="lede">Curated boxes, e-gift cards and a Gifting Concierge that delivers across India.</p>
+          <a href="#" class="btn btn-light">Explore gifts</a>
+        </div>
+      </article>
+    </div>
+
+    <button class="hero-nav prev" aria-label="Previous slide">&#8249;</button>
+    <button class="hero-nav next" aria-label="Next slide">&#8250;</button>
+
+    <div class="hero-dots" id="heroDots"></div>
+  </section>
+
+  <!-- Category tiles -->
+  <section class="section categories">
+    <header class="section-head">
+      <p class="eyebrow">Explore</p>
+      <h2>Shop the world of Sutra</h2>
+    </header>
+    <div class="cat-grid">
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="assets/images/cat-women.jpg" alt="Women" loading="lazy" /></div>
+        <h3>Women</h3>
+        <span class="cat-link">Kurtas, sarees &amp; more &rarr;</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="assets/images/cat-men.jpg" alt="Men" loading="lazy" /></div>
+        <h3>Men</h3>
+        <span class="cat-link">Shirts, kurtas, accessories &rarr;</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="assets/images/cat-home.jpg" alt="Home" loading="lazy" /></div>
+        <h3>Home</h3>
+        <span class="cat-link">Decor, tableware, textiles &rarr;</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="assets/images/cat-gift.jpg" alt="Gifting" loading="lazy" /></div>
+        <h3>Gifting</h3>
+        <span class="cat-link">Curated for every occasion &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Brand storytelling strip -->
+  <section class="story-strip">
+    <div class="story-grid">
+      <div class="story-text">
+        <p class="eyebrow">Our story</p>
+        <h2>A modern Indian way<br/>of living, dressing and<br/>looking at the world.</h2>
+        <p>At Sutra, we believe journeys are as worthy as destinations. Our pieces are built slowly &mdash; with master weavers, ceramicists and tailors across the country &mdash; for people who care about culture as much as commerce.</p>
+        <a href="#" class="btn btn-dark">Read our story</a>
+      </div>
+      <div class="story-images">
+        <img src="assets/images/story-1.jpg" alt="" loading="lazy" class="story-img-a"/>
+        <img src="assets/images/story-2.jpg" alt="" loading="lazy" class="story-img-b"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bestsellers -->
+  <section class="section bestsellers">
+    <header class="section-head with-link">
+      <div>
+        <p class="eyebrow">Loved by all</p>
+        <h2>Bestsellers</h2>
+      </div>
+      <a href="#" class="view-all">View all &rarr;</a>
+    </header>
+    <div class="product-grid">
+      <article class="product">
+        <a href="#" class="product-img"><img src="assets/images/prod-1.jpg" alt="" loading="lazy" /></a>
+        <h4>The Everyday Kurta</h4>
+        <p class="meta">Cotton, hand-block printed</p>
+        <p class="price">&#8377; 2,890</p>
+      </article>
+      <article class="product">
+        <a href="#" class="product-img"><img src="assets/images/prod-2.jpg" alt="" loading="lazy" /></a>
+        <h4>Brass Tealight Set</h4>
+        <p class="meta">Set of three &mdash; hand-finished</p>
+        <p class="price">&#8377; 1,650</p>
+      </article>
+      <article class="product">
+        <a href="#" class="product-img"><img src="assets/images/prod-3.jpg" alt="" loading="lazy" /></a>
+        <h4>Linen Wrap Dress</h4>
+        <p class="meta">European flax, indigo dye</p>
+        <p class="price">&#8377; 4,990</p>
+      </article>
+      <article class="product">
+        <a href="#" class="product-img"><img src="assets/images/prod-4.jpg" alt="" loading="lazy" /></a>
+        <h4>Terracotta Planter</h4>
+        <p class="meta">Hand-thrown in Pondicherry</p>
+        <p class="price">&#8377; 1,290</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Editorial split -->
+  <section class="editorial">
+    <div class="editorial-img" style="background-image:url('assets/images/lookbook.jpg')"></div>
+    <div class="editorial-content">
+      <p class="eyebrow">Lookbook</p>
+      <h2>Winter wardrobe, <em>slow and warm</em></h2>
+      <p>Layered linen, raw silk and the kind of pieces that travel from morning chai to evening dinners. A small edit for the season.</p>
+      <a href="#" class="btn btn-dark">View the lookbook</a>
+    </div>
+  </section>
+
+  <!-- Craft tiles -->
+  <section class="section craft">
+    <header class="section-head">
+      <p class="eyebrow">Made with care</p>
+      <h2>The makers behind Sutra</h2>
+    </header>
+    <div class="craft-grid">
+      <article class="craft-card">
+        <img src="assets/images/craft-1.jpg" alt="" loading="lazy" />
+        <h3>Block-printers of Bagru</h3>
+        <p>Four generations of natural-dye printers shape every motif you see on our cottons.</p>
+      </article>
+      <article class="craft-card">
+        <img src="assets/images/craft-2.jpg" alt="" loading="lazy" />
+        <h3>Weavers of Maheshwar</h3>
+        <p>Cotton-silk sarees, woven on pit looms by the banks of the Narmada.</p>
+      </article>
+      <article class="craft-card">
+        <img src="assets/images/craft-3.jpg" alt="" loading="lazy" />
+        <h3>Potters of Pondicherry</h3>
+        <p>Wheel-thrown terracotta and stoneware, fired in small batches.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Journal -->
+  <section class="section journal">
+    <header class="section-head with-link">
+      <div>
+        <p class="eyebrow">From the journal</p>
+        <h2>Reading list</h2>
+      </div>
+      <a href="#" class="view-all">All stories &rarr;</a>
+    </header>
+    <div class="journal-grid">
+      <article class="journal-card">
+        <a href="#"><img src="assets/images/journal-1.jpg" alt="" loading="lazy" /></a>
+        <p class="tag">Travel</p>
+        <h3><a href="#">A long weekend in Bundi</a></h3>
+        <p>Step wells, blue lanes, and the quietest fort in Rajasthan.</p>
+      </article>
+      <article class="journal-card">
+        <a href="#"><img src="assets/images/journal-2.jpg" alt="" loading="lazy" /></a>
+        <p class="tag">Home</p>
+        <h3><a href="#">Five ways to layer a low table</a></h3>
+        <p>How our home stylist sets a slow, considered table for six.</p>
+      </article>
+      <article class="journal-card">
+        <a href="#"><img src="assets/images/journal-3.jpg" alt="" loading="lazy" /></a>
+        <p class="tag">Craft</p>
+        <h3><a href="#">In the studio with our potters</a></h3>
+        <p>An afternoon with the women shaping our stoneware in Auroville.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" style="background-image:url('assets/images/newsletter.jpg')">
+    <div class="newsletter-inner">
+      <p class="eyebrow eyebrow-light">Welcome to Sutra</p>
+      <h2>10% off your first order</h2>
+      <p>Sign up for new collections, slow stories, and the occasional invitation. No spam, only good things.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('.nf-msg').textContent='Thank you. Check your inbox for SUTRAFIRST.'">
+        <input type="email" required placeholder="Your email address" aria-label="Email address" />
+        <button type="submit" class="btn btn-light">Subscribe</button>
+        <p class="nf-msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <section class="trust-bar">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h13l-3-3m3 3-3 3"/><path d="M21 6v12"/></svg>
+      <div><strong>Easy returns</strong><span>15-day returns</span></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+      <div><strong>We ship worldwide</strong><span>From India, with care</span></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+      <div><strong>Free shipping</strong><span>On orders above &#8377;1,000</span></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3z"/></svg>
+      <div><strong>Secure payments</strong><span>100% protected</span></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Sutra</h3>
+        <p>A modern Indian way of living, dressing and looking at the world.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v8M8 7v.01M12 18v-5a2 2 0 0 1 4 0v5M12 13v5"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M11 7c3 0 5 2 5 4.5 0 2-1.5 4-3.5 4-1 0-1.7-.5-2-1.2L9.7 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">Our story</a></li>
+          <li><a href="#">Meet the team</a></li>
+          <li><a href="#">In the press</a></li>
+          <li><a href="#">Find a store</a></li>
+          <li><a href="#">Work with us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Track order</a></li>
+          <li><a href="#">Shipping &amp; returns</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Size guide</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="contact">
+          <li>care@sutra.com</li>
+          <li>+91 85880 00150</li>
+          <li>Mon&ndash;Sat &middot; 9:30 AM &ndash; 5:30 PM IST</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Sutra. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
