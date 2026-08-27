@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sutra — Designer Clothing, Handwoven with Care</title>
-  <meta name="description" content="Sutra V4 — a modern Indian house. Handwoven clothing, home and gifting. Editorial, photography-first design." />
+  <title>Sutra — Handwoven Jamdani for Today</title>
+  <meta name="description" content="Sutra — handwoven Jamdani clothing for modern wardrobes. Kurta sets, sarees, dresses, co-ords and tops in sizes XS–6XL. Worldwide shipping, easy exchange, COD." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+
+  <!-- Announcement bar -->
+  <div class="announce" role="region" aria-label="Announcements">
+    <span>Worldwide Shipping</span>
+    <span>Easy Exchange</span>
+    <span>COD Available</span>
+    <span class="announce-offer">10% off your first order — code SUTRAFIRST</span>
+  </div>
 
   <!-- Header -->
   <header class="site-header" id="siteHeader">
@@ -25,56 +33,14 @@
 
       <nav class="primary-nav" aria-label="Primary">
         <ul>
-          <li class="has-mega">
-            <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Shop</a>
-            <div class="mega" aria-hidden="true">
-              <div class="mega-inner">
-                <div class="mega-col">
-                  <p class="mega-title">Women</p>
-                  <ul>
-                    <li><a href="#">Shop All</a></li>
-                    <li><a href="#">Sarees</a></li>
-                    <li><a href="#">Kurtas</a></li>
-                    <li><a href="#">Dresses</a></li>
-                    <li><a href="#">Blouses</a></li>
-                    <li><a href="#">Festive</a></li>
-                  </ul>
-                </div>
-                <div class="mega-col">
-                  <p class="mega-title">Men</p>
-                  <ul>
-                    <li><a href="#">Just In</a></li>
-                    <li><a href="#">Kurtas</a></li>
-                    <li><a href="#">Shirts</a></li>
-                    <li><a href="#">Jackets</a></li>
-                    <li><a href="#">Trousers</a></li>
-                  </ul>
-                </div>
-                <div class="mega-col">
-                  <p class="mega-title">Home</p>
-                  <ul>
-                    <li><a href="#">Textiles</a></li>
-                    <li><a href="#">Brass &amp; Terracotta</a></li>
-                    <li><a href="#">Tableware</a></li>
-                    <li><a href="#">Gifting</a></li>
-                    <li><a href="#">E-Gift Cards</a></li>
-                  </ul>
-                </div>
-                <a class="mega-card" href="#">
-                  <img src="../assets/images/v4-menu-1.jpg" alt="The Core Edit — easy everyday separates" loading="lazy" />
-                  <span>The Core Edit</span>
-                </a>
-                <a class="mega-card" href="#">
-                  <img src="../assets/images/v4-menu-2.jpg" alt="Essentials in soft cottons" loading="lazy" />
-                  <span>Essentials</span>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li><a href="#" class="nav-link">New Arrivals</a></li>
-          <li><a href="#campaign" class="nav-link">Campaign</a></li>
+          <li><a href="#new-arrivals" class="nav-link">New Arrivals</a></li>
+          <li><a href="#" class="nav-link">Sarees</a></li>
+          <li><a href="#" class="nav-link">Kurta Sets</a></li>
+          <li><a href="#" class="nav-link">Co-ords &amp; Skords</a></li>
+          <li><a href="#" class="nav-link">Dresses</a></li>
+          <li><a href="#" class="nav-link">Tops</a></li>
           <li><a href="#craft" class="nav-link">Craft</a></li>
-          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link nav-sale">Sale</a></li>
         </ul>
       </nav>
 
@@ -87,7 +53,7 @@
         </a>
         <a href="#" class="icon-btn cart-btn" aria-label="Cart">
           <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 7h12l-1.4 11.2A2 2 0 0 1 14.6 20H9.4a2 2 0 0 1-2-1.8L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
-          <span class="cart-count">0</span>
+          <span class="cart-count" id="cartCount">0</span>
         </a>
       </div>
     </div>
@@ -97,123 +63,399 @@
   <div class="drawer" id="drawer" aria-hidden="true">
     <nav aria-label="Mobile">
       <ul>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Home &amp; Gifting</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#campaign">Campaign</a></li>
+        <li><a href="#new-arrivals">New Arrivals</a></li>
+        <li><a href="#">Sarees</a></li>
+        <li><a href="#">Kurta Sets</a></li>
+        <li><a href="#">Co-ords &amp; Skords</a></li>
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Tops</a></li>
         <li><a href="#craft">Craft</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#" class="drawer-sale">Sale</a></li>
       </ul>
     </nav>
+    <p class="drawer-trust">XS&ndash;6XL &middot; Easy Exchange &middot; Worldwide Shipping &middot; COD</p>
   </div>
   <div class="drawer-scrim" id="drawerScrim" hidden></div>
 
-  <!-- Hero carousel -->
-  <section class="hero" aria-label="Featured collections">
-    <div class="hero-slides" id="heroSlides">
-      <article class="hero-slide is-active" style="background-image:url('../assets/images/v4-hero-1.jpg')">
-        <div class="hero-content">
-          <p class="hero-eyebrow">New Collection</p>
-          <h1>The Narmada Edit</h1>
-          <a href="#" class="btn btn-solid">Discover the Collection</a>
-        </div>
-      </article>
-      <article class="hero-slide" style="background-image:url('../assets/images/v4-hero-2.jpg')">
-        <div class="hero-content">
-          <p class="hero-eyebrow">Summer &rsquo;26</p>
-          <h1>Malhar</h1>
-          <a href="#" class="btn btn-solid">Discover the Collection</a>
-        </div>
-      </article>
-      <article class="hero-slide" style="background-image:url('../assets/images/v4-hero-3.jpg')">
-        <div class="hero-content">
-          <p class="hero-eyebrow">Menswear</p>
-          <h1>Summer for Him</h1>
-          <a href="#" class="btn btn-solid">Shop Menswear</a>
-        </div>
-      </article>
+  <!-- Hero -->
+  <section class="hero" aria-label="The New Jamdani Edit" style="background-image:url('../assets/images/v4-hero-1.jpg')">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Handwoven for Today</p>
+      <h1>The New Jamdani Edit</h1>
+      <p class="hero-lede">Needle-woven by hand. Designed for modern wardrobes.</p>
+      <a href="#new-arrivals" class="btn btn-solid">Shop New Arrivals</a>
     </div>
-    <button class="hero-nav prev" aria-label="Previous slide">&#8249;</button>
-    <button class="hero-nav next" aria-label="Next slide">&#8250;</button>
-    <div class="hero-dots" id="heroDots"></div>
   </section>
 
-  <!-- Campaign banners -->
-  <div id="campaign">
-
-    <section class="campaign-banner" style="background-image:url('../assets/images/v4-campaign-1.jpg')">
-      <div class="banner-content">
-        <p class="banner-eyebrow">Festive &rsquo;26</p>
-        <h2>Raat Rani</h2>
-        <p class="banner-lede">Ivory, kundan and the slow shimmer of an evening garden.</p>
-        <a href="#" class="btn btn-solid">Discover the Collection</a>
+  <!-- Trust points -->
+  <section class="trust" aria-label="Why shop with Sutra">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 8h18v8H3z"/><path d="M7 8v3M11 8v2M15 8v3M19 8v2"/></svg>
+        <span>Sizes XS&ndash;6XL</span>
       </div>
-    </section>
-
-    <section class="campaign-banner" style="background-image:url('../assets/images/v4-campaign-2.jpg')">
-      <div class="banner-content">
-        <p class="banner-eyebrow">The Saree Edit</p>
-        <h2>Rite of Monsoon</h2>
-        <p class="banner-lede">Featherlight drapes for long afternoons and warm rain.</p>
-        <a href="#" class="btn btn-solid">Shop Sarees</a>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 9a8 8 0 0 1 14-3l2 2"/><path d="M20 3v5h-5"/><path d="M20 15a8 8 0 0 1-14 3l-2-2"/><path d="M4 21v-5h5"/></svg>
+        <span>Easy Exchange</span>
       </div>
-    </section>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>
+        <span>Worldwide Shipping</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="6" width="18" height="12" rx="1"/><circle cx="12" cy="12" r="3"/><path d="M6 9h.01M18 15h.01"/></svg>
+        <span>COD Available</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="campaign-split">
-      <a href="#" class="split-card">
-        <div class="split-media" style="background-image:url('../assets/images/v4-campaign-3.jpg')"></div>
-        <div class="split-caption">
-          <h3>The Core Edit</h3>
-          <span class="text-link">Shop Core</span>
+  <!-- Shop by Category -->
+  <section class="shop-section categories" aria-label="Shop by category">
+    <div class="shop-inner">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Shop by Category</p>
+          <h2>Find Your Weave</h2>
         </div>
-      </a>
-      <a href="#" class="split-card">
-        <div class="split-media" style="background-image:url('../assets/images/v4-hero-3.jpg')"></div>
-        <div class="split-caption">
-          <h3>Menswear</h3>
-          <span class="text-link">Shop Men</span>
-        </div>
-      </a>
-    </section>
-
-    <section class="campaign-banner" style="background-image:url('../assets/images/v4-campaign-4.jpg')">
-      <div class="banner-content">
-        <p class="banner-eyebrow">Sutra Home</p>
-        <h2>Quiet Rooms</h2>
-        <p class="banner-lede">Slow textiles, brass and terracotta for the home you actually live in.</p>
-        <a href="#" class="btn btn-solid">Shop Home</a>
       </div>
-    </section>
+      <div class="category-row">
+        <a href="#" class="category-card">
+          <img src="../assets/images/v4-menu-1.jpg" alt="Kurta sets in handwoven cotton" loading="lazy" />
+          <span>Kurta Sets</span>
+        </a>
+        <a href="#" class="category-card">
+          <img src="../assets/images/v4-campaign-2.jpg" alt="Handwoven Jamdani sarees and separates" loading="lazy" />
+          <span>Jamdani</span>
+        </a>
+        <a href="#" class="category-card">
+          <img src="../assets/images/cat-women.jpg" alt="Dresses in soft handloom fabrics" loading="lazy" />
+          <span>Dresses</span>
+        </a>
+        <a href="#" class="category-card">
+          <img src="../assets/images/v4-menu-2.jpg" alt="Co-ord and skord sets" loading="lazy" />
+          <span>Co-ords &amp; Skords</span>
+        </a>
+        <a href="#" class="category-card">
+          <img src="../assets/images/v4-hero-2.jpg" alt="Tops and blouses in handwoven cotton" loading="lazy" />
+          <span>Tops</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <!-- New Arrivals -->
+  <section class="shop-section products" id="new-arrivals" aria-label="New arrivals">
+    <div class="shop-inner">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Just In</p>
+          <h2>New Arrivals</h2>
+        </div>
+        <a href="#" class="text-link">View All</a>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/prod-1.jpg" alt="Meghna Jamdani kurta set" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Meghna Jamdani Kurta Set</h3>
+            <p class="product-price">&#8377;6,450</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/prod-2.jpg" alt="Noor handwoven co-ord set" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Noor Co-ord Set</h3>
+            <p class="product-price">&#8377;5,200</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/prod-3.jpg" alt="Indigo handloom dress" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Indigo Handloom Dress</h3>
+            <p class="product-price">&#8377;4,650</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/prod-4.jpg" alt="Sana Jamdani top" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Sana Jamdani Top</h3>
+            <p class="product-price">&#8377;3,450</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/journal-1.jpg" alt="Rose motif Jamdani skord set" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Rose Motif Skord Set</h3>
+            <p class="product-price">&#8377;5,850</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/journal-2.jpg" alt="Mul cotton wrap dress" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Mul Cotton Wrap Dress</h3>
+            <p class="product-price">&#8377;4,250</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/craft-2.jpg" alt="Kesar handspun kurta set" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Kesar Handspun Kurta Set</h3>
+            <p class="product-price">&#8377;6,950</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/lookbook.jpg" alt="Ivory Jamdani saree" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Ivory Jamdani Saree</h3>
+            <p class="product-price">&#8377;9,800</p>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <!-- Craft -->
-  <section class="craft" id="craft">
-    <div class="craft-inner">
-      <div class="craft-media">
+  <!-- Jamdani Story -->
+  <section class="jamdani" aria-label="The art of Jamdani">
+    <div class="jamdani-inner">
+      <div class="jamdani-media">
+        <img src="../assets/images/craft-1.jpg" alt="A weaver working Jamdani motifs on a handloom" loading="lazy" />
+      </div>
+      <div class="jamdani-copy">
+        <p class="eyebrow">The Craft</p>
+        <h2>The Art of Jamdani</h2>
+        <p class="jamdani-lede">Each motif is added by hand, thread by thread, as the fabric is woven &mdash; a technique passed down through generations of Bengal&rsquo;s master weavers.</p>
+        <ul class="jamdani-points">
+          <li>
+            <h3>Woven, not printed</h3>
+            <p>Every motif sits inside the weave itself. Turn the fabric over &mdash; there is no wrong side.</p>
+          </li>
+          <li>
+            <h3>Made slowly by hand</h3>
+            <p>A single piece can take weeks on the loom. No two days of weaving are ever the same.</p>
+          </li>
+          <li>
+            <h3>Every piece is unique</h3>
+            <p>Small shifts of the weaver&rsquo;s hand mean your Jamdani exists nowhere else in the world.</p>
+          </li>
+        </ul>
+        <a href="#" class="text-link text-link-light">Discover Jamdani</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bestsellers -->
+  <section class="shop-section products" aria-label="Bestsellers">
+    <div class="shop-inner">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Most Loved</p>
+          <h2>Bestsellers</h2>
+        </div>
+        <a href="#" class="text-link">View All</a>
+      </div>
+      <div class="product-grid product-grid-4">
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/v4-campaign-1.jpg" alt="Raat Rani festive kurta set" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Raat Rani Kurta Set</h3>
+            <p class="product-price">&#8377;7,200</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/v4-campaign-4.jpg" alt="Signature Jamdani saree" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">The Signature Jamdani Saree</h3>
+            <p class="product-price">&#8377;11,500</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/hero-1.jpg" alt="Asha everyday kurta set" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Asha Everyday Kurta Set</h3>
+            <p class="product-price">&#8377;6,200</p>
+          </a>
+        </article>
+        <article class="product-card">
+          <div class="product-media">
+            <a href="#"><img src="../assets/images/hero-2.jpg" alt="Dhara Jamdani dress" loading="lazy" /></a>
+            <button type="button" class="quick-shop">Quick Shop</button>
+          </div>
+          <a href="#" class="product-info">
+            <h3 class="product-name">Dhara Jamdani Dress</h3>
+            <p class="product-price">&#8377;5,400</p>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop by Craft -->
+  <section class="shop-section crafts" id="craft" aria-label="Shop by craft">
+    <div class="shop-inner">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Shop by Craft</p>
+          <h2>Techniques We Keep Alive</h2>
+        </div>
+      </div>
+      <div class="craft-tiles">
+        <a href="#" class="craft-tile">
+          <div class="craft-tile-media" style="background-image:url('../assets/images/craft-3.jpg')"></div>
+          <div class="craft-tile-caption">
+            <h3>Jamdani</h3>
+            <span class="text-link text-link-light">Shop Jamdani</span>
+          </div>
+        </a>
+        <a href="#" class="craft-tile">
+          <div class="craft-tile-media" style="background-image:url('../assets/images/v4-campaign-3.jpg')"></div>
+          <div class="craft-tile-caption">
+            <h3>Handloom Cotton</h3>
+            <span class="text-link text-link-light">Shop Handloom</span>
+          </div>
+        </a>
+        <a href="#" class="craft-tile">
+          <div class="craft-tile-media" style="background-image:url('../assets/images/v4-store.jpg')"></div>
+          <div class="craft-tile-caption">
+            <h3>Block Print</h3>
+            <span class="text-link text-link-light">Shop Block Print</span>
+          </div>
+        </a>
+        <a href="#" class="craft-tile">
+          <div class="craft-tile-media" style="background-image:url('../assets/images/hero-3.jpg')"></div>
+          <div class="craft-tile-caption">
+            <h3>Natural Dye</h3>
+            <span class="text-link text-link-light">Shop Natural Dye</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artisan Story -->
+  <section class="artisan" aria-label="Our artisans">
+    <div class="artisan-inner">
+      <div class="artisan-media">
         <img src="../assets/images/v4-craft-1.jpg" alt="A weaver at a handloom, working an ikat weave" loading="lazy" />
       </div>
-      <div class="craft-copy">
-        <p class="eyebrow">Crafts &amp; Techniques</p>
-        <h2>Woven by hand,<br />one thread at a time</h2>
-        <p>Every Sutra garment begins on a loom &mdash; with the block-printers of Bagru, the weavers of Maheshwar and the dyers who still work with indigo and iron. We name the hands behind each weave, because the craft is the point.</p>
-        <a href="#" class="text-link">Explore Our Craft</a>
+      <div class="artisan-copy">
+        <p class="eyebrow">Our Artisans</p>
+        <h2>The hands behind<br />the weave</h2>
+        <p>Every Sutra garment begins on a loom &mdash; with the Jamdani weavers of Bengal, the block-printers of Bagru and the dyers who still work with indigo and iron. We name the hands behind each weave, because the craft is the point.</p>
+        <a href="#" class="text-link">Meet Our Artisans</a>
       </div>
-      <div class="craft-media craft-media-2">
+      <div class="artisan-media artisan-media-2">
         <img src="../assets/images/v4-craft-2.jpg" alt="Neutral handspun garments on wooden hangers" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- Stores -->
-  <section class="stores" style="background-image:url('../assets/images/v4-store.jpg')">
-    <div class="banner-content">
-      <p class="banner-eyebrow">Visit Us</p>
-      <h2>Sutra, In Person</h2>
-      <p class="banner-lede">Delhi &middot; Mumbai &middot; Bengaluru &mdash; and stockists across India.</p>
-      <a href="#" class="btn btn-solid">Explore Our Stores</a>
+  <!-- Customer Reviews -->
+  <section class="shop-section reviews" aria-label="Customer reviews">
+    <div class="shop-inner">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="eyebrow">Customer Love</p>
+          <h2>Worn &amp; Loved</h2>
+          <p class="reviews-summary"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 average &middot; 1,200+ verified reviews</p>
+        </div>
+      </div>
+      <div class="review-grid">
+        <article class="review-card">
+          <img src="../assets/images/story-1.jpg" alt="Customer wearing a Sutra Jamdani kurta set" loading="lazy" />
+          <div class="review-body">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="review-quote">&ldquo;The weave is so fine you can feel the hours in it. I ordered a 4XL and the fit is perfect &mdash; finally a brand that cuts for real bodies.&rdquo;</p>
+            <p class="review-meta">Ananya R. &middot; Kolkata &middot; <span>Verified Buyer</span></p>
+          </div>
+        </article>
+        <article class="review-card">
+          <img src="../assets/images/story-2.jpg" alt="Customer in a handwoven Sutra dress" loading="lazy" />
+          <div class="review-body">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="review-quote">&ldquo;Shipped to London in five days. The Jamdani dress looks even better in person &mdash; people stop me to ask where it&rsquo;s from.&rdquo;</p>
+            <p class="review-meta">Priya S. &middot; London &middot; <span>Verified Buyer</span></p>
+          </div>
+        </article>
+        <article class="review-card">
+          <img src="../assets/images/journal-3.jpg" alt="Customer styling a Sutra co-ord set" loading="lazy" />
+          <div class="review-body">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="review-quote">&ldquo;Needed a different size and the exchange was completely painless. The co-ord is my most-worn outfit this year.&rdquo;</p>
+            <p class="review-meta">Meera K. &middot; Bengaluru &middot; <span>Verified Buyer</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram -->
+  <section class="shop-section instagram" aria-label="Sutra on Instagram">
+    <div class="shop-inner">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="eyebrow">Instagram</p>
+          <h2>Follow @sutra</h2>
+        </div>
+      </div>
+      <div class="insta-grid">
+        <a href="#" class="insta-tile" aria-label="View post on Instagram">
+          <img src="../assets/images/journal-3.jpg" alt="Sutra Instagram post" loading="lazy" />
+          <span class="insta-overlay"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a href="#" class="insta-tile" aria-label="View post on Instagram">
+          <img src="../assets/images/cat-gift.jpg" alt="Sutra Instagram post" loading="lazy" />
+          <span class="insta-overlay"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a href="#" class="insta-tile" aria-label="View post on Instagram">
+          <img src="../assets/images/cat-home.jpg" alt="Sutra Instagram post" loading="lazy" />
+          <span class="insta-overlay"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a href="#" class="insta-tile" aria-label="View post on Instagram">
+          <img src="../assets/images/v4-hero-3.jpg" alt="Sutra Instagram post" loading="lazy" />
+          <span class="insta-overlay"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a href="#" class="insta-tile" aria-label="View post on Instagram">
+          <img src="../assets/images/v4-hero-2.jpg" alt="Sutra Instagram post" loading="lazy" />
+          <span class="insta-overlay"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a href="#" class="insta-tile" aria-label="View post on Instagram">
+          <img src="../assets/images/cat-men.jpg" alt="Sutra Instagram post" loading="lazy" />
+          <span class="insta-overlay"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -241,7 +483,8 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <p class="brand-mark">Sutra</p>
-        <p class="footer-tag">A modern Indian way of living, dressing and looking at the world.</p>
+        <p class="footer-tag">Handwoven Jamdani for modern wardrobes. Needle-woven by hand, designed for today.</p>
+        <p class="footer-trust">XS&ndash;6XL &middot; Easy Exchange &middot; Worldwide Shipping &middot; COD</p>
         <div class="socials">
           <a href="#" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
@@ -251,26 +494,28 @@
       <nav class="footer-col" aria-label="Shop">
         <p class="footer-head">Shop</p>
         <ul>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Gifting</a></li>
-          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#new-arrivals">New Arrivals</a></li>
+          <li><a href="#">Sarees</a></li>
+          <li><a href="#">Kurta Sets</a></li>
+          <li><a href="#">Co-ords &amp; Skords</a></li>
+          <li><a href="#">Dresses</a></li>
+          <li><a href="#">Tops</a></li>
+          <li><a href="#">Sale</a></li>
         </ul>
       </nav>
       <nav class="footer-col" aria-label="About">
         <p class="footer-head">About</p>
         <ul>
           <li><a href="#craft">Craft</a></li>
+          <li><a href="#">Our Artisans</a></li>
           <li><a href="#">Sustainability</a></li>
           <li><a href="#">Stores</a></li>
-          <li><a href="#">Stockists</a></li>
         </ul>
       </nav>
       <nav class="footer-col" aria-label="Help">
         <p class="footer-head">Help</p>
         <ul>
-          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Size Guide (XS&ndash;6XL)</a></li>
           <li><a href="#">Shipping &amp; Returns</a></li>
           <li><a href="#">Contact Us</a></li>
           <li><a href="mailto:care@sutra.com">care@sutra.com</a></li>

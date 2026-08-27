@@ -1,58 +1,6 @@
-// Sutra home V4 — interactivity
+// Sutra home V4 — interactivity (client revision)
 
 document.getElementById('year').textContent = new Date().getFullYear();
-
-// Hero slider
-(function () {
-  const slides = document.querySelectorAll('#heroSlides .hero-slide');
-  const dotsWrap = document.getElementById('heroDots');
-  const prev = document.querySelector('.hero-nav.prev');
-  const next = document.querySelector('.hero-nav.next');
-  if (!slides.length) return;
-
-  let i = 0;
-  let timer;
-
-  slides.forEach((_, idx) => {
-    const b = document.createElement('button');
-    b.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
-    if (idx === 0) b.classList.add('is-active');
-    b.addEventListener('click', () => go(idx));
-    dotsWrap.appendChild(b);
-  });
-  const dots = dotsWrap.querySelectorAll('button');
-
-  function go(n) {
-    slides[i].classList.remove('is-active');
-    dots[i].classList.remove('is-active');
-    i = (n + slides.length) % slides.length;
-    slides[i].classList.add('is-active');
-    dots[i].classList.add('is-active');
-    restart();
-  }
-  function restart() {
-    clearInterval(timer);
-    timer = setInterval(() => go(i + 1), 6500);
-  }
-
-  prev.addEventListener('click', () => go(i - 1));
-  next.addEventListener('click', () => go(i + 1));
-
-  // pause on hover
-  const hero = document.querySelector('.hero');
-  hero.addEventListener('mouseenter', () => clearInterval(timer));
-  hero.addEventListener('mouseleave', restart);
-
-  // swipe
-  let startX = 0;
-  hero.addEventListener('touchstart', e => startX = e.touches[0].clientX, { passive: true });
-  hero.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - startX;
-    if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
-  });
-
-  restart();
-})();
 
 // Mobile drawer
 (function () {
@@ -75,29 +23,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
 })();
 
-// Mega menu — tap support for touch devices (hover handled in CSS)
-(function () {
-  const item = document.querySelector('.has-mega');
-  if (!item) return;
-  const link = item.querySelector('.nav-link');
-  const mega = item.querySelector('.mega');
-
-  link.addEventListener('click', e => {
-    if (window.matchMedia('(hover: none)').matches) {
-      e.preventDefault();
-      const open = mega.classList.toggle('is-open');
-      link.setAttribute('aria-expanded', open);
-      mega.setAttribute('aria-hidden', !open);
-    }
-  });
-  document.addEventListener('click', e => {
-    if (!item.contains(e.target)) {
-      mega.classList.remove('is-open');
-      link.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-
 // Header shadow on scroll
 (function () {
   const header = document.getElementById('siteHeader');
@@ -108,6 +33,26 @@ document.getElementById('year').textContent = new Date().getFullYear();
     else if (y <= 8 && last > 8) header.classList.remove('is-scrolled');
     last = y;
   }, { passive: true });
+})();
+
+// Quick shop — add to bag feedback
+(function () {
+  const count = document.getElementById('cartCount');
+  let items = 0;
+  document.querySelectorAll('.quick-shop').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.disabled) return;
+      items += 1;
+      count.textContent = items;
+      const label = btn.textContent;
+      btn.textContent = 'Added ✓';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = label;
+        btn.disabled = false;
+      }, 1400);
+    });
+  });
 })();
 
 // Newsletter fake submit
@@ -125,7 +70,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Fade-up on intersection
 (function () {
-  const els = document.querySelectorAll('.campaign-banner, .campaign-split, .craft, .stores, .newsletter');
+  const els = document.querySelectorAll('.trust, .categories, .products, .jamdani, .crafts, .artisan, .reviews, .instagram, .newsletter');
   if (!('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver(entries => {
     entries.forEach(en => {
